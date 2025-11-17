@@ -77,9 +77,9 @@ php artisan test
 ```
 
 **Cobertura:**
-- ✅ Orders: 12+ test cases (creación, validaciones, edge cases)
-- ✅ Payments: 8 test cases (pagos exitosos, fallidos, reintentos, estados)
-- ✅ Products: Tests básicos
+- [X] Orders: 12+ test cases (creación, validaciones, edge cases)
+- [X] Payments: 8 test cases (pagos exitosos, fallidos, reintentos, estados)
+- [X] Products: Tests básicos
 
 ## Instalación y Configuración
 
@@ -121,3 +121,19 @@ php artisan test
 - **API externa en Go**: Implementé un servidor mock en Go que responde con estados aleatorios (success/failure), simulando comportamiento real de pasarelas de pago donde pueden ocurrir errores de red, rechazos bancarios, etc.
 - **Testing con mocks**: Los tests usan `Http::fake()` para simular respuestas sin depender del servidor externo
 - **Retry logic**: Pedidos fallidos pueden reintentar el pago de la cuota específica que falló
+
+
+# Fue un verdadero reto 💪
+```
+         ,_---~~~~~----._         
+  _,,_,*^____      _____``*g*\"*, 
+ / __/ /'     ^.  /      \ ^@q   f 
+[  @f | @))    |  | @))   l  0 _/  
+ \`/   \~____ / __ \_____/    \   
+  |           _l__l_           I   
+  }          [______]           I  
+  ]            | | |            |  
+  ]             ~ ~             |  
+  |                            |   
+   |                           |   
+```
