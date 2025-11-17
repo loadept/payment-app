@@ -16,4 +16,9 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_env_is_testing()
+    {
+        $this->assertSame('testing', env('APP_ENV'));
+    }
 }

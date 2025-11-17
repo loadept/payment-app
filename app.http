@@ -1,0 +1,65 @@
+@BASE_URL = http://localhost:8000/api
+
+GET {{BASE_URL}}/health
+
+###
+
+GET {{BASE_URL}}/products
+
+###
+
+GET {{BASE_URL}}/orders
+Content-Type: application/json
+X-User-Id: 5
+
+###
+
+GET {{BASE_URL}}/orders/1
+Content-Type: application/json
+Accept: application/json
+X-User-Id: 5
+
+###
+
+POST {{BASE_URL}}/orders
+Content-Type: application/json
+Accept: application/json
+X-User-Id: 5
+
+{
+    "products": [
+        {
+            "id": 1,
+            "quantity": 1
+        },
+        {
+            "id": 9,
+            "quantity": 1
+        },
+        {
+            "id": 25,
+            "quantity": 1
+        }
+    ],
+    "installments": 1
+}
+
+###
+
+GET {{BASE_URL}}/payments/plan/1
+Content-Type: application/json
+Accept: application/json
+X-User-Id: 17
+
+###
+
+POST {{BASE_URL}}/payments/pay
+Content-Type: application/json
+Accept: application/json
+X-User-Id: 5
+
+{
+    "order_id": 3,
+    "total_payment": 2049.98,
+    "installment_number": 1
+}
