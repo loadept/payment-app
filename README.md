@@ -122,6 +122,39 @@ php artisan test
 - **Testing con mocks**: Los tests usan `Http::fake()` para simular respuestas sin depender del servidor externo
 - **Retry logic**: Pedidos fallidos pueden reintentar el pago de la cuota específica que falló
 
+## Esquema y Estructura
+
+![](docs/shots/db.png)
+
+```
+ app
+├──  Console
+│   └──  Commands
+├──  Exceptions
+├──  Http
+│   └──  Requests
+├──  Orders
+│   ├──  Controllers
+│   ├──  Models
+│   ├──  Repositories
+│   └──  Services
+├──  Payments
+│   ├──  Controllers
+│   ├──  Models
+│   ├──  Repositories
+│   └──  Services
+├──  Products
+│   ├──  Controllers
+│   ├──  Models
+│   ├──  Repositories
+│   └──  Services
+├──  Providers
+└──  Users
+    ├──  Controllers
+    ├──  Models
+    └──  Services
+```
+
 
 # Fue un verdadero reto 💪
 ```
